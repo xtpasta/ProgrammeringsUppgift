@@ -2,7 +2,7 @@ package common;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    static void main() {
         Scanner scanner = new Scanner(System.in);
         TextCounter counter = new TextCounter();
 
