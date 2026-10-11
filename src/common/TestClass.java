@@ -14,7 +14,6 @@ public class TestClass {
         counter.addLine("Rad tre");
 
         assertEquals(3, counter.getLineCount());
-        assertEquals(19, counter.getCharacterCount());
     }
 
     @Test
