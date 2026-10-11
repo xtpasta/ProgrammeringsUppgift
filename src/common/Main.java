@@ -2,19 +2,23 @@ package common;
 import java.util.Scanner;
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         TextCounter counter = new TextCounter();
 
-        boolean nextLine = true;
+        System.out.println("Skriv stop för att avsluta programmet");
 
-        while (nextLine) {
+        boolean keepGoing = true;
+
+        while (keepGoing) {
             String line = scanner.nextLine();
-            nextLine = counter.AddLine(line);
+            keepGoing = counter.addLine(line);
         }
 
-        System.out.println("Antal rader: " + counter.getLineCount());
-        System.out.println("Antal tecken: " + counter.getCharacterCount());
+        System.out.println("Antalet rader: " + counter.getLineCount());
+        System.out.println("Antalet tecken: " + counter.getCharacterCount());
+        System.out.println("Antalet ord: " + counter.getWordCount());
+        System.out.println("Längsta ordet är: " + counter.getLongestWord());
 
         scanner.close();
     }
